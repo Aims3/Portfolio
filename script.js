@@ -133,3 +133,30 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatus.classList.add('status-success');
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    if (menuBtn && navLinks) {
+        // 1. Open/Close the menu when the button is clicked
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active-menu');
+            
+            // Change text from "Menu" to "Close"
+            if (navLinks.classList.contains('active-menu')) {
+                menuBtn.innerText = '✕ Close';
+            } else {
+                menuBtn.innerText = '☰ Menu';
+            }
+        });
+
+        // 2. Hide the menu automatically when a link is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active-menu');
+                menuBtn.innerText = '☰ Menu';
+            });
+        });
+    }
+});
