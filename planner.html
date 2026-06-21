@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaku Andrawus| Academic Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+            <div class="logo-circle"></div>
+                Academic<span>Port.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="planner.html" class="active">Planner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            </button>
+            <div class="theme-toggle">
+                <button id="mode-btn" title="Toggle Mode"><i class="fas fa-moon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h1 class="page-title">Academic <span>Planner</span></h1>
+        <p class="section-intro">Manage your coursework, assignments, and study sessions here.</p>
+        
+        <div class="planner-box">
+            <div class="task-input-area">
+                <input type="text" id="task-input" placeholder="E.g., Read Chapter 4 of Web Tech...">
+                <button id="add-task-btn" class="btn primary-btn"><i class="fas fa-plus"></i> Add Task</button>
+            </div>
+
+            <ul id="task-list" class="task-list">
+                </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
